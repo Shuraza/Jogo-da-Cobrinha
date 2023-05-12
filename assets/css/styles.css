@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 700px;
+  background-color: black;
+}
+
+.wrapper {
+  width: 400px;
+  height: 500px;
+  background: rgb(49, 129, 38);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.detalhes {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.telaJogavel {
+  width: 100%;
+  height: 100%;
+  background-color: chartreuse;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+.telaJogavel .food {
+  background-color: rebeccapurple;
+}
+
+.telaJogavel .cobra {
+  background-color: brown;
+}
+.controles {
+  display: none;
+  justify-content: space-between;
+}
+.controles i {
+  color: rgb(255, 255, 255);
+  padding: 25px 0;
+  text-align: center;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 900;
+  width: calc(100% / 4);
+  border-right: 1px solid black;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .detalhes {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controles {
+    display: flex;
+  }
+  .controles i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
